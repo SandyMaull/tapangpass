@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>BEM FT UTS - @yield('title')</title>
+	<title>TapangPass Cafe - @yield('title')</title>
     <link nonce="4LLScR1pT1H4V3" rel="stylesheet" href="{{asset('assets/tapangpass/bootstrap.min.css')}}">
     <link nonce="4LLScR1pT1H4V3" href="{{ asset('assets/tapangpass/owl.carousel.min.css') }}" rel="stylesheet"/>
     <link nonce="4LLScR1pT1H4V3" href="{{ asset('assets/tapangpass/owl.theme.default.min.css') }}" rel="stylesheet"/>
