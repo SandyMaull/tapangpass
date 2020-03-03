@@ -37,6 +37,6 @@ Route::group(['middleware' => 'auth'],function(){
     });
     Route::get('Admin/Tapangpass/Dashboard','TapangpassAdminController@index');
     Route::get('Admin/Tapangpass/GenerateWifi','TapangpassAdminController@generate');
-    Route::get('/Admin/Tapangpass/FlushWifi','TapangpassAdminController@deleteRecord');
+    // Route::get('/Admin/Tapangpass/FlushWifi','TapangpassAdminController@deleteRecord');
 
 });

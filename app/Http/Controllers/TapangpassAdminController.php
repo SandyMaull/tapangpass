@@ -28,18 +28,18 @@ class TapangpassAdminController extends Controller
      */
     public function generate()
     {
-        $radcheck = new Radcheck;
-        $radcheck->username = str_random(6);
-        $radcheck->attribute = "Cleartext-Password";
-        $radcheck->op = ":=";
-        $radcheck->value = str_random(6);
-        $radcheck->created_at = Carbon::now()->addDays(1)->format('Y-m-d');
-        $wifilog = new Wifilog;
-        $wifilog->log = 'User ' . $radcheck->username . ' Berhasil dibuat! dengan Password ' . $radcheck->value . ' Pada ' . Carbon::now() ;
-        $wifilog->created_at = Carbon::now();
-        $wifilog->save();
-        $radcheck->save();
-        return redirect('/Admin/Tapangpass');
+        // $radcheck = new Radcheck;
+        // $radcheck->username = str_random(6);
+        // $radcheck->attribute = "Cleartext-Password";
+        // $radcheck->op = ":=";
+        // $radcheck->value = str_random(6);
+        // $radcheck->created_at = Carbon::now()->addDays(1)->format('Y-m-d');
+        // $wifilog = new Wifilog;
+        // $wifilog->log = 'User ' . $radcheck->username . ' Berhasil dibuat! dengan Password ' . $radcheck->value . ' Pada ' . Carbon::now() ;
+        // $wifilog->created_at = Carbon::now();
+        // $wifilog->save();
+        // $radcheck->save();
+        return view('Admin/generate');
     }
 
     /**
