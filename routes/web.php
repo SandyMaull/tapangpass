@@ -11,9 +11,32 @@
 |
 */
 
+// Kuronekosan
 Route::get('/', function () {
     // return view('welcome');
     return redirect('/tapangpass');
 });
-
 Route::get('/tapangpass', 'TapangpassController@index');
+
+
+// Auth
+Route::get('/login', 'AuthController@login')->name('login');
+Route::post('/auth_login','AuthController@authlogin');
+Route::get('/logout','AuthController@logout');
+
+
+Route::group(['middleware' => 'auth'],function(){
+    Route::get('/Admin', function () {
+        return redirect('/Admin/Dashboard');
+    });
+    Route::get('/Admin/Dashboard', 'AdminController@index');
+    
+    // TapangPass
+    Route::get('/Admin/Tapangpass', function () {
+            return redirect('/Admin/Tapangpass/Dashboard');
+    });
+    Route::get('Admin/Tapangpass/Dashboard','TapangpassAdminController@index');
+    Route::get('Admin/Tapangpass/GenerateWifi','TapangpassAdminController@generate');
+    Route::get('/Admin/Tapangpass/FlushWifi','TapangpassAdminController@deleteRecord');
+
+});

@@ -13,7 +13,7 @@ class TapangpassController extends Controller
      */
     public function index()
     {
-        return view('tapangpass/index');
+        return view('tapangpass/Homepage/index');
     }
 
     /**
