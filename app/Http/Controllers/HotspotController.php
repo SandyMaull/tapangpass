@@ -22,4 +22,10 @@ class HotspotController extends Controller
            return redirect('/tapangpass');
         }
     }
+
+    public function csrf(Request $request)
+    {
+        $_token = $request->session()->token();
+        return $_token;
+    }
 }
