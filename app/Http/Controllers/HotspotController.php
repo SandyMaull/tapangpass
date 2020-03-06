@@ -22,6 +22,7 @@ class HotspotController extends Controller
         // else {
         //     redirect('/tapangpass');
         // }
-        dd(Request::exists('ujank_gaming'));
+        // dd(Request::exists('ujank_gaming'));
+        dd($request->has('ujank_gaming'));
     }
 }
