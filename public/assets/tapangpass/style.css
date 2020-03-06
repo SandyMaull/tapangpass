@@ -8,7 +8,7 @@ html, body {
 }
 .navbar {
   padding: .8rem;
-  background-color: #d9dfe4;
+  background-color: #FBF3E2;
 }
 .navbar-toggler{
   border-color: #fff;
@@ -23,11 +23,11 @@ html, body {
 }
 .nav-link {
   font-size: 1.1em !important;
-  color: #343a40;
+  color: rgb(105, 97, 83);
 }
 .nav-link:hover {
   font-size: 1.1em !important;
-  color: rgb(155, 155, 155);
+  color: rgb(175, 135, 35);
 }
 .carousel-inner img {
   width: 100%;
@@ -101,7 +101,7 @@ html, body {
   font-size: 4em;
   margin: 1rem;
 }
-.maskot {
+/* .maskot {
   width: 100%;
   margin-bottom: 2rem;
   background-color: #a71414;
@@ -112,7 +112,7 @@ html, body {
 }
 .hokuchan {
   max-width: 100%;
-}
+} */
 .social a {
   font-size: 4.5em;
   padding: 3rem;
@@ -140,25 +140,25 @@ html, body {
   color: #d5d5d5;
 }
 footer {
-  background-color: #d9dfe4;
-  color: #343a40;
+  background-color: #FBF3E2;
+  color: rgb(105, 97, 83);
   padding-top: 2rem;
 }
 hr.light {
-  border-top: 1px solid #343a40;
+  border-top: 1px solid #9B8C74;
   width: 75%;
   margin-top: .8rem;
   margin-bottom: 1rem;
 }
 footer a {
-  color: #343a40;
+  color: rgb(105, 97, 83);
 }
 footer a:hover {
-  color: rgb(155, 155, 155);
+  color: rgb(175, 135, 35);
   text-decoration: none;
 }
 hr.light-100 {
-  border-top: 1px solid #343a40;
+  border-top: 1px solid #6A5727;
   width: 100%;
   margin-top: .8rem;
   margin-bottom: 1rem;

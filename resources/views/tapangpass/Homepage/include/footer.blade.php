@@ -5,25 +5,26 @@
             <div class="col-md-4">
                 <img src="{{ asset('assets/tapangpass/img/tapangpass.jpeg') }}" style="height:50px;"> <span style="margin-left:1.5rem;font-size:1.3em;">TapangPass Cafe</span>
                 <hr class="light">
-                <p>0853 2022 4447</p>
+                <p>0822 6087 9023</p>
                 <p><a href="mailto:kuro@tapangpass-loka.id">admin@tapangpass-loka.id</a></p>
-                <p><a href="https://www.google.com/maps/uv?hl=id&pb=!1s0x2dcb932df2d305f1:0x971406aa67c71c2d!2m22!2m2!1i80!2i80!3m1!2i20!16m16!1b1!2m2!1m1!1e1!2m2!1m1!1e3!2m2!1m1!1e5!2m2!1m1!1e4!2m2!1m1!1e6!3m1!7e115!4shttps://lh5.googleusercontent.com/p/AF1QipMGJvA3MO_89c55PqAuNhP1dTYHgC76f3-ccIMd%3Dw213-h160-k-no!5sUniversitas+Teknologi+Sumbawa+-+Penelusuran+Google&imagekey=!1e10!2sAF1QipMGJvA3MO_89c55PqAuNhP1dTYHgC76f3-ccIMd&sa=X&ved=2ahUKEwjEsaX0gbLkAhXn7nMBHQvIDEEQoiowF3oECAwQBg">
-                    Jl. Raya Olat Maras, Batu Alang, Moyo Hulu, Pernek, Moyohulu, Kabupaten Sumbawa</p>
-                <p>Nusa Tenggara Bar. 84371</p></a>
+                <p><a href="https://goo.gl/maps/kCuS9Z9Fsp5sdKoQ7">
+                    Bugis, Sumbawa Sub-District, Sumbawa Regency, West Nusa Tenggara 84313</p>
+                </a>
             </div>
             <div class="col-md-4">
                 <hr class="light">
-                <h5>Place</h5>
+                <h5>Open</h5>
                 <hr class="light">
                 <p>-----------------------------</p>
-                <p>Bugis, Sumbawa Sub-District, Sumbawa Regency, West Nusa Tenggara 84313</p>
+                <p class="open">09AM - 11PM</p>
+                <p>-----------------------------</p>
             </div>
             <div class="col-md-4">
                 <hr class="light">
                 <h5>Support</h5>
                 <hr class="light">
-                <p><a href="http://mikrotik.co.id/">Mikrotik Indonesia</a></p>
                 <p><a href="https://kuronekosan.web.id">Kuroneko</a></p>
+                <p><a href="http://mikrotik.co.id/">Mikrotik Indonesia</a></p>
 		<p><a href="https://laravel.com">Laravel Framework</a></p>
             </div>
             <div class="col-12">
