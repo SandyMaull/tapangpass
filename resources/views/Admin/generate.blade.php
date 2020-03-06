@@ -152,37 +152,35 @@
                     User: Test<br>
                     Pass: Test<br>
                 </div>
-                {{-- <div class="qrcode" id="%u_username%"></div> --}}
-                {{-- <script>
+                <div class="qrcode" id="5g2hOe"></div>
+                <script>
                     jQuery(function () {
-                        jQuery('#%u_username%').qrcode({
+                        jQuery('#5g2hOe').qrcode({
                             "render": 'canvas',
                             "size": 100,
                             "minVersion": 5,
                             "maxVersion": 5,
                             "ecLevel": 'L',
                             "mode": 0,
-                            "text": "http://namahotspot.net/login?username=%u_username%&password=%u_password%",
+                            "text": "http://hotspot.tapangpass-loka.id/login?username=5g2hOe&password=OJWQmE",
                             "quiet": 0,
                         });
                     })
 
-                </script> --}}
+                </script>
             </div>
             <div class="right-half">
                 <div id="kanan">
                     <br>
-                    BUANANET HOTSPOT<br>
+                    Tapangpass HOTSPOT<br>
                 </div>
                 <div id="info">
-                    <u>namahotspot.net</u><br><br>
-                    Duration: Test<br>
-                    Validation: Test<br>
-                    Quota: Test<br>
+                    <u>tapangpass-loka.id</u><br><br>
+                    Duration: 1d (1 Hari)<br>
                     Shared: 1 User<br>
                 </div>
                 <div id="kontak">
-                    CP: 081328298xxx
+                    CP: 082260879023
                 </div>
             </div>
         </div>

@@ -54,7 +54,24 @@ class TapangpassAdminController extends Controller
     }
     public function deleteRecord()
     {
-
+        $check = RadPostAuth::where([
+            ['reply', 'Access-Accept'],
+            ['authdate', '>', Carbon::now()->subDays(1)],
+            ['authdate', '<', Carbon::now()],
+        ])->get();
+        foreach ($check as $checkuser) {
+            $checkusername = $checkuser->username;
+            $radcheck = Radcheck::where('username', $checkusername)->first();
+            $newwifilog = new Wifilog;
+            if ($radcheck) {
+                $newwifilog->log = 'User ' . $radcheck->username . ' Berhasil dihapus!';
+                $newwifilog->created_at = Carbon::now();
+                $newwifilog->save();
+                $radcheck->delete();
+            }
+            $RadPostAuth = RadPostAuth::where('id',$checkuser->id)->first();
+            $RadPostAuth->delete();
+        }
     }
 
     /**

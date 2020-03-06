@@ -23,6 +23,7 @@ Route::get('/tapangpass', 'TapangpassController@index');
 Route::get('/login', 'AuthController@login')->name('login');
 Route::post('/auth_login','AuthController@authlogin');
 Route::get('/logout','AuthController@logout');
+Route::get('/hotspot_login','HotspotController@login');
 
 
 Route::group(['middleware' => 'auth'],function(){
@@ -37,6 +38,6 @@ Route::group(['middleware' => 'auth'],function(){
     });
     Route::get('Admin/Tapangpass/Dashboard','TapangpassAdminController@index');
     Route::get('Admin/Tapangpass/GenerateWifi','TapangpassAdminController@generate');
-    // Route::get('/Admin/Tapangpass/FlushWifi','TapangpassAdminController@deleteRecord');
-
+    Route::get('/Admin/Tapangpass/FlushWifi','TapangpassAdminController@deleteRecord');
+    
 });
