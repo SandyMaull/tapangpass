@@ -38,8 +38,8 @@ Login Hotspot
   <div class="container" style="height:100%;width:100%;">
     <div class="card card-login mx-auto mb-5" style="max-width:25rem;margin-top:15%;">
       <div class="card-header">
-        <p>FREE WIFI TAPANGPASS CAFE</p>
-        <p>Silahkan Masuk Untuk Melanjutkan..<p>
+        FREE WIFI TAPANGPASS CAFE<br>
+        Silahkan Masuk Untuk Melanjutkan..
       </div>
       <div class="card-body">
           <form action="<?php echo $linkloginonly; ?>" method="POST">
