@@ -11,8 +11,8 @@ html, body {
   background-color: #FBF3E2;
 }
 .navbar-toggler{
-  border-color: #fff;
-  text-decoration-color: #fff;
+  border-color: rgb(105, 97, 83);
+  text-decoration-color: rgb(105, 97, 83);
 }
 /* .navbar-brand img {
   filter: invert(93%) sepia(0%) saturate(7472%) hue-rotate(108deg) brightness(107%) contrast(400%);

@@ -6,7 +6,7 @@
         </a>
             {{-- <img src="{{ asset('assets/img/ft.png') }}" width="50px" height="50px">
             <img src="{{ asset('assets/img/bem.png') }}" width="50px" height="50px"></a> --}}
-        <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+        <button class="navbar-toggler navbar-light" type="button" data-toggle="collapse" data-target="#navbarResponsive">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
