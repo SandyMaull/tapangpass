@@ -8,13 +8,19 @@ class HotspotController extends Controller
 {
     public function login(Request $request)
     {
-        if($request->ujank_gaming == 'Kuronekosan_Server')
-        {
-            // dd($request->all());
-            return view('tapangpass/Homepage/login');
+        if($request->all() != null) {
+            if($request->ujank_gaming == 'Kuronekosan_Server')
+            {
+                // dd($request->all());
+                return view('tapangpass/Homepage/login');
+            }
+            else {
+                redirect('/tapangpass');
+            }
+            
         }
         else {
-            redirect('/');
+            redirect('/tapangpass');
         }
     }
 }

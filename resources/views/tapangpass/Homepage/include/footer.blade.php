@@ -16,13 +16,13 @@
                 <h5>Place</h5>
                 <hr class="light">
                 <p>-----------------------------</p>
-                <p>Universitas Teknologi Sumbawa</p>
+                <p>Bugis, Sumbawa Sub-District, Sumbawa Regency, West Nusa Tenggara 84313</p>
             </div>
             <div class="col-md-4">
                 <hr class="light">
                 <h5>Support</h5>
                 <hr class="light">
-                <p><a href="https://uts.ac.id/">Universitas Teknologi Sumbawa Website</a></p>
+                <p><a href="http://mikrotik.co.id/">Mikrotik Indonesia</a></p>
                 <p><a href="https://kuronekosan.web.id">Kuroneko</a></p>
 		<p><a href="https://laravel.com">Laravel Framework</a></p>
             </div>

@@ -54,6 +54,12 @@ Login Hotspot
             </div>
           </div>
           <button type="submit" class="btn btn-primary btn-block">Login</button>
+          <br><br>
+          @if ($error != null)
+            <p>
+              <span style="color: #FF8080; font-size: 16px">{{$error}}</span>
+            </p>
+          @endif
         </form>
       </div>
     </div>
