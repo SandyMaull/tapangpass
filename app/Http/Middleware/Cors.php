@@ -15,8 +15,9 @@ class Cors
      */
     public function handle($request, Closure $next)
     {
-        return $next($request)
-        ->header('Access-Control-Allow-Origin', 'hotspot.tapangpass-loka.id')
-        ->header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+        dd($request->all());
+        // return $next($request)
+        // ->header('Access-Control-Allow-Origin', '*')
+        // ->header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
     }
 }
