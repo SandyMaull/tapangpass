@@ -24,7 +24,6 @@ Route::get('/login', 'AuthController@login')->name('login');
 Route::post('/auth_login','AuthController@authlogin');
 Route::get('/logout','AuthController@logout');
 Route::post('/hotspot_login','HotspotController@login');
-Route::get('/CSRF_Verify','HotspotController@csrf')->middleware('cors');
 
 
 Route::group(['middleware' => 'auth'],function(){
