@@ -19,6 +19,8 @@ class VerifyCsrfToken extends Middleware
      * @var array
      */
     protected $except = [
-        'http://hotspot.tapangpass-loka.id/*'
+        'http://hotspot.tapangpass-loka.id/*',
+        '172.10.10.1/*',
+        'http://172.10.10.1/*'
     ];
 }
