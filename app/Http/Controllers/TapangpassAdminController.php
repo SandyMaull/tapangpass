@@ -26,22 +26,32 @@ class TapangpassAdminController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function generate()
+    public function generate($banyak)
     {
-        // $radcheck = new Radcheck;
-        // $radcheck->username = str_random(6);
-        // $radcheck->attribute = "Cleartext-Password";
-        // $radcheck->op = ":=";
-        // $radcheck->value = str_random(6);
-        // $radcheck->created_at = Carbon::now()->addDays(1)->format('Y-m-d');
-        // $wifilog = new Wifilog;
-        // $wifilog->log = 'User ' . $radcheck->username . ' Berhasil dibuat! dengan Password ' . $radcheck->value . ' Pada ' . Carbon::now() ;
-        // $wifilog->created_at = Carbon::now();
-        // $wifilog->save();
-        // $radcheck->save();
-        return view('Admin/generate');
-    }
+        for ($i=0; $i < $banyak; $i++) { 
+            $radcheck[$i] = new Radcheck;
+            $radcheck[$i]->username = str_random(6);
+            $radcheck[$i]->attribute = "Cleartext-Password";
+            $radcheck[$i]->op = ":=";
+            $radcheck[$i]->value = str_random(6);
+            $radcheck[$i]->created_at = Carbon::now()->addDays(1)->format('Y-m-d');
+            $wifilog[$i] = new Wifilog;
+            $wifilog[$i]->log = 'User ' . $radcheck[$i]->username . ' Berhasil dibuat! dengan Password ' . $radcheck[$i]->value . ' Pada ' . Carbon::now() ;
+            $wifilog[$i]->created_at = Carbon::now();
 
+            $data[$i]['username'] = $radcheck[$i]->username;
+            $data[$i]['password'] = $radcheck[$i]->value;
+
+            // $wifilog[$i]->save();
+            // $radcheck[$i]->save();
+        }
+        $wifilog_all = new Wifilog;
+        $wifilog_all->log = $banyak . ' User Berhasil dibuat! pada '. Carbon::now() ;
+        $wifilog_all->created_at = Carbon::now();
+        // $wifilog_all->save();
+        return view('Admin/generate', ['data' => $data, 'jumlah' => $banyak]);
+    }
+    
     /**
      * Store a newly created resource in storage.
      *
