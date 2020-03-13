@@ -40,7 +40,7 @@
             "maxVersion": 5,
             "ecLevel": 'L',
             "mode": 0,
-            "text": "http://namahotspot.net/login?username={{$dt['username']}}&password={{$dt['password']}}",
+            "text": "http://hotspot.tapangpass-loka.id/login?username={{$dt['username']}}&password={{$dt['password']}}",
             "quiet": 0,
         });
     })
