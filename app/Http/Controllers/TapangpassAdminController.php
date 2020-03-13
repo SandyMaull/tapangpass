@@ -42,13 +42,13 @@ class TapangpassAdminController extends Controller
             $data[$i]['username'] = $radcheck[$i]->username;
             $data[$i]['password'] = $radcheck[$i]->value;
 
-            // $wifilog[$i]->save();
-            // $radcheck[$i]->save();
+            $wifilog[$i]->save();
+            $radcheck[$i]->save();
         }
         $wifilog_all = new Wifilog;
         $wifilog_all->log = $banyak . ' User Berhasil dibuat! pada '. Carbon::now() ;
         $wifilog_all->created_at = Carbon::now();
-        // $wifilog_all->save();
+        $wifilog_all->save();
         return view('Admin/generate', ['data' => $data, 'jumlah' => $banyak]);
     }
     
