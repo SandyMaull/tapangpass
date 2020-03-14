@@ -29,12 +29,16 @@ class TapangpassAdminController extends Controller
     public function generate($banyak)
     {
         for ($i=0; $i < $banyak; $i++) { 
+            $randomuser[$i] = strtolower(str_random(6));
+            while (Radcheck::where('username',$randomuser[$i])->first()) {
+                $randomuser[$i] = str_random(6);
+            }
             $radcheck[$i] = new Radcheck;
-            $radcheck[$i]->username = str_random(6);
+            $radcheck[$i]->username = $randomuser[$i];
             $radcheck[$i]->attribute = "Cleartext-Password";
             $radcheck[$i]->op = ":=";
-            $radcheck[$i]->value = str_random(6);
-            $radcheck[$i]->created_at = Carbon::now()->addDays(1)->format('Y-m-d');
+            $radcheck[$i]->value = strtolower(str_random(6));
+            $radcheck[$i]->created_at = Carbon::now()->format('Y-m-d');
             $wifilog[$i] = new Wifilog;
             $wifilog[$i]->log = 'User ' . $radcheck[$i]->username . ' Berhasil dibuat! dengan Password ' . $radcheck[$i]->value . ' Pada ' . Carbon::now() ;
             $wifilog[$i]->created_at = Carbon::now();
@@ -64,24 +68,24 @@ class TapangpassAdminController extends Controller
     }
     public function deleteRecord()
     {
-        $check = RadPostAuth::where([
-            ['reply', 'Access-Accept'],
-            ['authdate', '>', Carbon::now()->subDays(1)],
-            ['authdate', '<', Carbon::now()],
-        ])->get();
-        foreach ($check as $checkuser) {
-            $checkusername = $checkuser->username;
-            $radcheck = Radcheck::where('username', $checkusername)->first();
-            $newwifilog = new Wifilog;
-            if ($radcheck) {
-                $newwifilog->log = 'User ' . $radcheck->username . ' Berhasil dihapus!';
-                $newwifilog->created_at = Carbon::now();
-                $newwifilog->save();
-                $radcheck->delete();
-            }
-            $RadPostAuth = RadPostAuth::where('id',$checkuser->id)->first();
-            $RadPostAuth->delete();
-        }
+        // $check = RadPostAuth::where([
+        //     ['reply', 'Access-Accept'],
+        //     ['authdate', '>', Carbon::now()->subDays(1)],
+        //     ['authdate', '<', Carbon::now()],
+        // ])->get();
+        // foreach ($check as $checkuser) {
+        //     $checkusername = $checkuser->username;
+        //     $radcheck = Radcheck::where('username', $checkusername)->first();
+        //     $newwifilog = new Wifilog;
+        //     if ($radcheck) {
+        //         $newwifilog->log = 'User ' . $radcheck->username . ' Berhasil dihapus!';
+        //         $newwifilog->created_at = Carbon::now();
+        //         $newwifilog->save();
+        //         $radcheck->delete();
+        //     }
+        //     $RadPostAuth = RadPostAuth::where('id',$checkuser->id)->first();
+        //     $RadPostAuth->delete();
+        // }
     }
 
     /**

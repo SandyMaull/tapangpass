@@ -25,6 +25,7 @@ Route::post('/auth_login','AuthController@authlogin');
 Route::get('/logout','AuthController@logout');
 Route::post('/hotspot_login','HotspotController@login');
 Route::get('/hotspot_logout', 'HotspotController@logout');
+// Route::get('/qrcode','HotspotController@qrcode');
 
 
 Route::group(['middleware' => 'auth'],function(){

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 use App\Radcheck;
 use App\Wifilog;
 use Carbon\Carbon;
@@ -52,4 +53,13 @@ class HotspotController extends Controller
             echo "Invalid!";
         }
     }
+
+    // public function qrcode()
+    // {
+    //     $randomuser = strtolower(str_random(6));
+    //     while (Radcheck::where('username',$randomuser)->first()) {
+    //         $randomuser = str_random(6);
+    //     }
+    //     dd($randomuser);
+    // }
 }
