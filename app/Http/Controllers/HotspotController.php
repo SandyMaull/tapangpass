@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Radcheck;
+use App\Wifilog;
+use Carbon\Carbon;
 
 class HotspotController extends Controller
 {
@@ -22,5 +25,31 @@ class HotspotController extends Controller
            return redirect('/tapangpass');
         }
         // dd($request->all());
+    }
+
+    public function logout(Request $request)
+    {
+        if($request->has('key')) {
+            if($request->key == 'M7giLTwkIH') {
+                // dd($request->all());
+                $checkdata = Radcheck::where('username',$request->user)->first();
+                if($checkdata) {
+                    $logdelete = new Wifilog;
+                    $logdelete->log = 'User ' . $checkdata->username . ' Berhasil dihapus!';
+                    $logdelete->created_at = Carbon::now();
+                    $logdelete->save();
+                    $checkdata->delete();
+                }
+                else {
+                    echo "Invalid!";
+                }
+            }
+            else {
+                echo "Invalid!";
+            }
+        }
+        else {
+            echo "Invalid!";
+        }
     }
 }
