@@ -38,7 +38,7 @@ class TapangpassAdminController extends Controller
             $radcheck[$i]->attribute = "Cleartext-Password";
             $radcheck[$i]->op = ":=";
             $radcheck[$i]->value = strtolower(str_random(6));
-            $radcheck[$i]->created_at = Carbon::now()->format('Y-m-d');
+            $radcheck[$i]->created_at = Carbon::now();
             $wifilog[$i] = new Wifilog;
             $wifilog[$i]->log = 'User ' . $radcheck[$i]->username . ' Berhasil dibuat! dengan Password ' . $radcheck[$i]->value . ' Pada ' . Carbon::now() ;
             $wifilog[$i]->created_at = Carbon::now();
