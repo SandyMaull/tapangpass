@@ -30,14 +30,14 @@ class TapangpassAdminController extends Controller
     {
         for ($i=0; $i < $banyak; $i++) { 
             $randomuser[$i] = strtolower(str_random(6));
-            while (Radcheck::where('username',$randomuser[$i])->first()) {
-                $randomuser[$i] = str_random(6);
+            while (Radcheck::where('username',$randomuser[$i])->exists()) {
+                $randomuser[$i] = strtolower(str_random(6));
             }
             $radcheck[$i] = new Radcheck;
             $radcheck[$i]->username = $randomuser[$i];
             $radcheck[$i]->attribute = "Cleartext-Password";
             $radcheck[$i]->op = ":=";
-            $radcheck[$i]->value = strtolower(str_random(6));
+            $radcheck[$i]->value = mt_rand(100000, 999999);
             $radcheck[$i]->created_at = Carbon::now();
             $wifilog[$i] = new Wifilog;
             $wifilog[$i]->log = 'User ' . $radcheck[$i]->username . ' Berhasil dibuat! dengan Password ' . $radcheck[$i]->value . ' Pada ' . Carbon::now() ;
@@ -55,7 +55,7 @@ class TapangpassAdminController extends Controller
         $wifilog_all->save();
         return view('Admin/generate', ['data' => $data, 'jumlah' => $banyak]);
     }
-    
+
     /**
      * Store a newly created resource in storage.
      *
