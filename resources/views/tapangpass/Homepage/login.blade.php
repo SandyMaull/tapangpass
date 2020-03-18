@@ -47,7 +47,7 @@ Login Hotspot
               <input type="hidden" name="popup" value="true"/>
           <div class="form-group">
             <div class="form-label-group">
-              <input type="text" id="inputNIM" class="form-control" name="username" placeholder="Login" autofocus required>
+              <input style="text-transform: lowercase;" type="text" id="inputNIM" class="form-control" name="username" placeholder="Login" autofocus required>
             </div>
           </div>
           <div class="form-group">
@@ -59,7 +59,9 @@ Login Hotspot
           <br><br>
           @if ($error != null)
             <p>
-              <span style="color: #FF8080; font-size: 16px">{{$error}}</span>
+              <span style="color: #FF8080; font-size: 16px">
+                {{$error}}
+              </span>
             </p>
           @endif
         </form>
@@ -67,25 +69,4 @@ Login Hotspot
     </div>
   </div>
 
-@endsection
-
-@section('script')
-  <?php if($chapid) : ?> 
-  <script type="text/javascript" src="js/md5.js"></script>
-  <script type="text/javascript">
-  <!--
-      function doLogin() {
-      <?php if(strlen($chapid) < 1) echo "return true;n"; ?>
-      document.sendin.username.value = document.login.username.value;
-      document.sendin.password.value = hexMD5('<?php echo $chapid; ?>' + document.login.password.value + '<?php echo $chapchallenge; ?>');
-      document.sendin.submit();
-      return false;
-      }
-  //-->
-  </script>
-  <?php endif; ?>
-  
-  <script type="text/javascript">
-    document.login.username.focus();
-  </script>
 @endsection
