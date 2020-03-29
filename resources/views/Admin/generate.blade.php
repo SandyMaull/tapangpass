@@ -8,7 +8,7 @@
         </div>
         <div class="konten">
             <p>Masa Aktif <span class="a">: 1 Days</span></p>
-            <p>Durasi <span class="b">: 24 Jam</span></p>
+            <p>Limit <span class="b">: 1 Perangkat</span></p>
             <div class="footer">
                 <h4>Kuronekosan</h4>
                 <h4>0822 6087 9023</h4>

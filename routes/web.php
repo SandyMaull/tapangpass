@@ -33,6 +33,8 @@ Route::group(['middleware' => 'auth'],function(){
         return redirect('/Admin/Dashboard');
     });
     Route::get('/Admin/Dashboard', 'AdminController@index');
+    Route::get('/Admin/Users', 'AdminController@index_user');
+    Route::get('Admin/Users/Register', 'AdminController@register_user');
     
     // TapangPass
     Route::get('/Admin/Tapangpass', function () {
