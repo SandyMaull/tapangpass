@@ -107,7 +107,7 @@
                      Settings
                 </a>
                 <div class="dropdown-divider"></div>
-                <a href="#" class="dropdown-item">
+                <a href="#" class="dropdown-item" data-toggle="modal" data-target="#Logout">
                     <i class="fas fa-sign-out-alt"></i>
                      Logout
                 </a>

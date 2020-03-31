@@ -51,7 +51,9 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="{{url('/Admin/Tapangpass/GenerateWifi')}}" class="nav-link">
+                                    {{-- {{url('/Admin/Tapangpass/GenerateWifi')}} --}}
+                                    <a href="" class="nav-link"
+                                    data-toggle="modal" data-target="#GenerateWifi">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Generate Voucher Wifi</p>
                                     </a>
