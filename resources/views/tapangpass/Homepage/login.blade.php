@@ -47,12 +47,12 @@ Login Hotspot
               <input type="hidden" name="popup" value="true"/>
           <div class="form-group">
             <div class="form-label-group">
-              <input style="text-transform: lowercase;" type="text" id="inputNIM" class="form-control" name="username" placeholder="Login" autofocus required>
+              <input style="text-transform: lowercase;" type="text" id="inputNIM" class="form-control" name="username" placeholder="Login" pattern="[a-z0-9]{6}" required>
             </div>
           </div>
           <div class="form-group">
             <div class="form-label-group">
-              <input type="password" id="inputPassword" class="form-control" name="password" placeholder="Password" required>
+              <input type="password" id="inputPassword" class="form-control" name="password" placeholder="Password" pattern="[0-9]{3}" required>
             </div>
           </div>
           <button type="submit" class="btn btn-primary btn-block">Login</button>
