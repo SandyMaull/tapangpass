@@ -47,12 +47,12 @@ Login Hotspot
               <input type="hidden" name="popup" value="true"/>
           <div class="form-group">
             <div class="form-label-group">
-              <input style="text-transform: lowercase;" type="text" id="inputNIM" class="form-control" name="username" placeholder="Login" pattern="[a-z0-9]{6}" required>
+              <input style="text-transform: lowercase;" type="text" id="inputNIM" class="form-control" name="username" placeholder="Login" pattern="[a-z0-9]+" title="Masukan Format Input yang Benar, menggunakan combinasi huruf kecil dan angka jika ada, contoh: asd45s" required>
             </div>
           </div>
           <div class="form-group">
             <div class="form-label-group">
-              <input type="password" id="inputPassword" class="form-control" name="password" placeholder="Password" pattern="[0-9]{3}" required>
+              <input type="password" id="inputPassword" class="form-control" name="password" placeholder="Password" pattern="[0-9]{3}" title="Masukan Format Input yang Benar, menggunakan combinasi angka, contoh: 234" required>
             </div>
           </div>
           <button type="submit" class="btn btn-primary btn-block">Login</button>
