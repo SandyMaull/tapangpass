@@ -28,7 +28,7 @@
         </div>
     </div>
     <div class="side">
-        <p>FREE</p>
+        <p>Rp.4000</p>
     </div>
 </div>
 <script>
@@ -40,7 +40,7 @@
             "maxVersion": 5,
             "ecLevel": 'L',
             "mode": 0,
-            "text": "http://hotspot.tapangpass-loka.id/login?username={{$dt['username']}}&password={{$dt['password']}}",
+            "text": "http://icancell.hotspot.net/login?username={{$dt['username']}}&password={{$dt['password']}}",
             "quiet": 0,
         });
     })
