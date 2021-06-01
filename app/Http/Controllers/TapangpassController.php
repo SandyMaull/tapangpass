@@ -11,6 +11,12 @@ class TapangpassController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function redirectindex()
+    {
+        return redirect(route('redirecttapangpass'));
+    }
+
     public function index()
     {
         return view('tapangpass/Homepage/index');

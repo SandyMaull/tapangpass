@@ -11,6 +11,11 @@ class AdminController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function redirectindex()
+    {
+        return redirect(route('redirecadmindashboard'));
+    }
+
     public function index()
     {
         return view('Admin/index');

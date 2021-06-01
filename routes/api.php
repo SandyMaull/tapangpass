@@ -18,14 +18,14 @@ use Illuminate\Support\Facades\Route;
 //     return $request->user();
 // });
 
-Route::group([
-    'middleware' => 'api',
-], function(){
+// Route::group([
+//     'middleware' => 'api',
+// ], function(){
 
-    Route::post('/auth/signup', 'ApiAuthController@signup');
-    Route::post('/auth/signin', 'ApiAuthController@signin');
-    Route::post('/auth/me','ApiAuthController@me');
-    Route::post('/auth/logout','ApiAuthController@logout');
-    Route::post('/auth/refresh','ApiAuthController@refresh');
+//     Route::post('/auth/signup', 'ApiAuthController@signup');
+//     Route::post('/auth/signin', 'ApiAuthController@signin');
+//     Route::post('/auth/me','ApiAuthController@me');
+//     Route::post('/auth/logout','ApiAuthController@logout');
+//     Route::post('/auth/refresh','ApiAuthController@refresh');
 
-});
+// });

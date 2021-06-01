@@ -13,11 +13,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 // Kuronekosan
-Route::get('/', function () {
-    // return view('welcome');
-    return redirect('/tapangpass');
-});
-Route::get('/tapangpass', 'TapangpassController@index');
+
+Route::get('/', 'TapangpassController@redirectindex');
+Route::get('/tapangpass', 'TapangpassController@index')->name('redirecttapangpass');
 
 
 // Auth
@@ -30,18 +28,20 @@ Route::get('/hotspot_logout', 'HotspotController@logout');
 
 
 Route::group(['middleware' => 'auth'],function(){
-    Route::get('/Admin', function () {
-        return redirect('/Admin/Dashboard');
-    });
+    // Route::get('/Admin', function () {
+    //     return redirect('/Admin/Dashboard');
+    // });
+    Route::get('/Admin', 'AdminController@redirectindex')->name('redirecadmindashboard');
     Route::get('/Admin/Dashboard', 'AdminController@index');
     Route::get('/Admin/Users', 'AdminController@index_user');
     Route::get('Admin/Users/Register', 'AdminController@register_user');
     
     // TapangPass
-    Route::get('/Admin/Tapangpass', function () {
-            return redirect('/Admin/Tapangpass/Dashboard');
-    });
-    Route::get('Admin/Tapangpass/Dashboard','TapangpassAdminController@index');
+    // Route::get('/Admin/Tapangpass', function () {
+    //         return redirect('/Admin/Tapangpass/Dashboard');
+    // });
+    Route::get('Admin/Tapangpass','TapangpassAdminController@redirectindex');
+    Route::get('Admin/Tapangpass/Dashboard','TapangpassAdminController@index')->name('redirectadmintapangpass');
     Route::get('Admin/Tapangpass/GenerateWifi/{banyak}','TapangpassAdminController@generate');
     Route::get('/Admin/Tapangpass/FlushWifi','TapangpassAdminController@deleteRecord');
     
