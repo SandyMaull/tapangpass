@@ -23,7 +23,7 @@ class TapangpassAdminController extends Controller
 
     public function index()
     {
-        return view('tapangpass/Admin/index');
+        return view('Admin/index');
     }
 
     /**
