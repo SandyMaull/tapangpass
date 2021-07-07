@@ -33,7 +33,10 @@ class HotspotController extends Controller
         if($request->has('key')) {
             if($request->key == 'M7giLTwkIH') {
                 // dd($request->all());
-                $checkdata = Radcheck::where('username',$request->user)->first();
+                $checkdata = Radcheck::where([
+                    ['username', '=', $request->user],
+                    ['attribute', '=', 'Cleartext-Password']
+                    ])->first();
                 if($checkdata) {
                     $logdelete = new Wifilog;
                     $logdelete->log = 'User ' . $checkdata->username . ' Berhasil dihapus!';
