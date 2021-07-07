@@ -7,7 +7,7 @@
         <div class="tittle">
         </div>
         <div class="konten">
-            <p>Total Quota <span class="a">: 2 Gigabyte</span></p>
+            <p>Quota <span class="a">: 2 Gigabyte</span></p>
             <p>Limit <span class="b">: 1 Perangkat</span></p>
             <div class="footer">
                 <h4>Kuronekosan</h4>
