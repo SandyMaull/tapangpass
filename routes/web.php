@@ -31,8 +31,8 @@ Route::group(['middleware' => 'auth'],function(){
     // Route::get('/Admin', function () {
     //     return redirect('/Admin/Dashboard');
     // });
-    Route::get('/Admin', 'AdminController@redirectindex')->name('redirecadmindashboard');
-    Route::get('/Admin/Dashboard', 'AdminController@index');
+    Route::get('/Admin', 'AdminController@redirectindex');
+    Route::get('/Admin/Dashboard', 'AdminController@index')->name('redirecadmindashboard');
     Route::get('/Admin/Users', 'AdminController@index_user');
     Route::get('Admin/Users/Register', 'AdminController@register_user');
     

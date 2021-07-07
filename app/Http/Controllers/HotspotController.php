@@ -36,13 +36,18 @@ class HotspotController extends Controller
                 $checkdata = Radcheck::where([
                     ['username', '=', $request->user],
                     ['attribute', '=', 'Cleartext-Password']
-                    ])->first();
-                if($checkdata) {
+                ])->first();
+                $checkdata2 = Radcheck::where([
+                    ['username', '=', $request->user],
+                    ['attribute', '=', 'Max-Data']
+                ])->first();
+                if($checkdata && $checkdata2) {
                     $logdelete = new Wifilog;
                     $logdelete->log = 'User ' . $checkdata->username . ' Berhasil dihapus!';
                     $logdelete->created_at = Carbon::now();
                     $logdelete->save();
                     $checkdata->delete();
+                    $checkdata2->delete();
                 }
                 else {
                     echo "Invalid!";

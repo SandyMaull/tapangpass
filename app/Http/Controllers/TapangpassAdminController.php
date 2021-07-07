@@ -44,15 +44,23 @@ class TapangpassAdminController extends Controller
             $radcheck[$i]->op = ":=";
             $radcheck[$i]->value = mt_rand(100, 999);
             $radcheck[$i]->created_at = Carbon::now();
+            $radcheck[$i]->save();
+            $quota[$i] = new Radcheck;
+            $quota[$i]->username = $randomuser[$i];
+            $quota[$i]->attribute = "Max-Data";
+            $quota[$i]->op = ":=";
+            $quota[$i]->value = '2147483648';
+            $quota[$i]->created_at = Carbon::now();
+            $quota[$i]->save();
             $wifilog[$i] = new Wifilog;
-            $wifilog[$i]->log = 'User ' . $radcheck[$i]->username . ' Berhasil dibuat! dengan Password ' . $radcheck[$i]->value . ' dan Quota 2GB, Pada ' . Carbon::now() ;
+            $wifilog[$i]->log = 'User ' . $radcheck[$i]->username . ' Berhasil dibuat! dengan Password ' . $radcheck[$i]->value . ' dan masing2 Quota 2GB, Pada ' . Carbon::now() ;
             $wifilog[$i]->created_at = Carbon::now();
 
             $data[$i]['username'] = $radcheck[$i]->username;
             $data[$i]['password'] = $radcheck[$i]->value;
 
             $wifilog[$i]->save();
-            $radcheck[$i]->save();
+            
         }
         $wifilog_all = new Wifilog;
         $wifilog_all->log = $banyak . ' User Berhasil dibuat! pada '. Carbon::now() ;
