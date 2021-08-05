@@ -47,13 +47,13 @@ class TapangpassAdminController extends Controller
             $radcheck[$i]->save();
             $quota[$i] = new Radcheck;
             $quota[$i]->username = $randomuser[$i];
-            $quota[$i]->attribute = "Max-Data";
+            $quota[$i]->attribute = "Max-All-Session";
             $quota[$i]->op = ":=";
-            $quota[$i]->value = '2147483648';
+            $quota[$i]->value = '86400';
             $quota[$i]->created_at = Carbon::now();
             $quota[$i]->save();
             $wifilog[$i] = new Wifilog;
-            $wifilog[$i]->log = 'User ' . $radcheck[$i]->username . ' Berhasil dibuat! dengan Password ' . $radcheck[$i]->value . ' dan masing2 Quota 2GB, Pada ' . Carbon::now() ;
+            $wifilog[$i]->log = 'User ' . $radcheck[$i]->username . ' Berhasil dibuat! dengan Password ' . $radcheck[$i]->value . ' dan masing2 Berlaku selama 24 Jam, Pada ' . Carbon::now() ;
             $wifilog[$i]->created_at = Carbon::now();
 
             $data[$i]['username'] = $radcheck[$i]->username;
@@ -69,6 +69,7 @@ class TapangpassAdminController extends Controller
         return view('Admin/generate', ['data' => $data, 'jumlah' => $banyak]);
     }
 
+    
     /**
      * Store a newly created resource in storage.
      *

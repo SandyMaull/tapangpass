@@ -7,28 +7,31 @@
         <div class="tittle">
         </div>
         <div class="konten">
-            <p>Quota <span class="a">: 2 Gigabyte</span></p>
-            <p>Limit <span class="b">: 1 Perangkat</span></p>
-            <div class="footer">
+            {{-- <p>Masa <span class="a">: 1 Hari</span></p> --}}
+            {{-- <p>Limit <span class="b">: 1 Perangkat</span></p> --}}
+            {{-- <div class="footer">
                 <h4>Kuronekosan</h4>
                 <h4>0822 6087 9023</h4>
-            </div>
-        </div>
-        <div class="user">
+            </div> --}}
             <div class="abs">
                 <p>USER</p>
                 <p>PASS</p>
+                <p>MASA</p>
             </div>
             <div class="abr">
                 <p>{{$dt['username']}}</p>
                 <p>{{$dt['password']}}</p>
+                <p>1 Hari</p>
             </div>
+        </div>
+        <div class="user">
+            <p class="malas">Males ngetik? Scan Me!</p>
             <div class="qrcode" id="ujank{{$loop->iteration}}">
             </div>
         </div>
     </div>
     <div class="side">
-        <p>Rp.4000</p>
+        <p>Rp.5000</p>
     </div>
 </div>
 <script>
