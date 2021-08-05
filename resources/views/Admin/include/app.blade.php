@@ -123,7 +123,7 @@
             var myInput = document.getElementById("jumlahWifi");
             if (myInput && myInput.value) {
                 console.log("My input has a value!, the value is " + myInput.value);
-                var jumlahperhal = 24;
+                var jumlahperhal = 20;
                 var jumlahtotal = jumlahperhal * myInput.value;
                 document.getElementById('url').href = "{{url('/Admin/Tapangpass/GenerateWifi')}}" + "/" + jumlahtotal;
             }
